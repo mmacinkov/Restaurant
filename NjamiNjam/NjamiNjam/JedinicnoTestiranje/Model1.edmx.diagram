@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9eded4c7960149b29b0e5a62de2a81be" Name="Diagram1">
+        <EntityTypeShape EntityType="DBTestModel.Artikli" Width="1.5" PointX="5.25" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTestModel.Korisnik" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTestModel.Nacin_placanja" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTestModel.Racun" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTestModel.Rezervacija" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTestModel.Status_korisnika" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTestModel.Status_racuna" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTestModel.Stavke_racuna" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTestModel.Tip" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTestModel.Tjedni_raspored" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTestModel.Uloga" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <AssociationConnector Association="DBTestModel.fk_Artikli_Tip_1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTestModel.fk_Stavke_racuna_Artikli_1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTestModel.fk_Korisnik_Status_1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTestModel.fk_Korisnik_Uloga_1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTestModel.fk_Racun_Korisnik_1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTestModel.fk_Rezervacija_Korisnik_1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTestModel.fk_Tjedni_raspored_Korisnik_1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTestModel.fk_Racun_Nacin_placanja_1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTestModel.fk_Racun_Status_racuna_1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTestModel.fk_Stavke_racuna_Racun_1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

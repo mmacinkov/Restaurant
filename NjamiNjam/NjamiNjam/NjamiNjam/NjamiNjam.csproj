@@ -1,0 +1,668 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A8C7D7C-5A9B-4708-A1E1-4DB3716576F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NjamiNjam</RootNamespace>
+    <AssemblyName>NjamiNjam</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\malazlica_KTD_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Artikli.cs">
+      <DependentUpon>NjamiNjamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAktivneNarudzbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAktivneNarudzbe.Designer.cs">
+      <DependentUpon>FrmAktivneNarudzbe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAzuriranjeRasporeda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAzuriranjeRasporeda.Designer.cs">
+      <DependentUpon>FrmAzuriranjeRasporeda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBrziArtikli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBrziArtikli.Designer.cs">
+      <DependentUpon>FrmBrziArtikli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajIliAžurirajBrzeArtikle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajIliAžurirajBrzeArtikle.Designer.cs">
+      <DependentUpon>FrmDodajIliAžurirajBrzeArtikle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajIliAžurirajHranu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajIliAžurirajHranu.Designer.cs">
+      <DependentUpon>FrmDodajIliAžurirajHranu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajIliAžurirajPiće.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajIliAžurirajPiće.Designer.cs">
+      <DependentUpon>FrmDodajIliAžurirajPiće.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajIliAžurirajSpecijalnuPonudu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajIliAžurirajSpecijalnuPonudu.Designer.cs">
+      <DependentUpon>FrmDodajIliAžurirajSpecijalnuPonudu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajIliAžurirajZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajIliAžurirajZaposlenika.Designer.cs">
+      <DependentUpon>FrmDodajIliAžurirajZaposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodavanjeRacuna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodavanjeRacuna.Designer.cs">
+      <DependentUpon>FrmDodavanjeRacuna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHrana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHrana.Designer.cs">
+      <DependentUpon>FrmHrana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIspisRacuna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIspisRacuna.Designer.cs">
+      <DependentUpon>FrmIspisRacuna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKreirajRacun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKreirajRacun.Designer.cs">
+      <DependentUpon>FrmKreirajRacun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKreiranjeNovogRasporeda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKreiranjeNovogRasporeda.Designer.cs">
+      <DependentUpon>FrmKreiranjeNovogRasporeda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPice.Designer.cs">
+      <DependentUpon>FrmPice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPonovanIspisRacuna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPonovanIspisRacuna.Designer.cs">
+      <DependentUpon>FrmPonovanIspisRacuna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPopisStolova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPopisStolova.Designer.cs">
+      <DependentUpon>FrmPopisStolova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPregledStola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPregledStola.Designer.cs">
+      <DependentUpon>FrmPregledStola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrijava.Designer.cs">
+      <DependentUpon>FrmPrijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPonuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPonuda.Designer.cs">
+      <DependentUpon>FrmPonuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNjamiNjam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNjamiNjam.Designer.cs">
+      <DependentUpon>FrmNjamiNjam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRasporedRadaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRasporedRadaAdmin.Designer.cs">
+      <DependentUpon>FrmRasporedRadaAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRasporedRadaKorisnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRasporedRadaKorisnik.Designer.cs">
+      <DependentUpon>FrmRasporedRadaKorisnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRačuni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRačuni.Designer.cs">
+      <DependentUpon>FrmRačuni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRezervacije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRezervacije.Designer.cs">
+      <DependentUpon>FrmRezervacije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSpecijalnaPonuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSpecijalnaPonuda.Designer.cs">
+      <DependentUpon>FrmSpecijalnaPonuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpravljanjeRezervacijama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpravljanjeRezervacijama.Designer.cs">
+      <DependentUpon>FrmUpravljanjeRezervacijama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpravljanjeZaposlenicima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpravljanjeZaposlenicima.Designer.cs">
+      <DependentUpon>FrmUpravljanjeZaposlenicima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klase\AktivneNarudzbe.cs" />
+    <Compile Include="Klase\BrziArtikl.cs" />
+    <Compile Include="Klase\DohvacanjeRacuna.cs" />
+    <Compile Include="Klase\Hrana.cs" />
+    <Compile Include="Klase\Piće.cs" />
+    <Compile Include="Klase\RasporedRada.cs" />
+    <Compile Include="Klase\UpravljanjeRezervacijom.cs" />
+    <Compile Include="Klase\SpecijalnaPonuda.cs" />
+    <Compile Include="Klase\Zaposlenik.cs" />
+    <Compile Include="Korisnik.cs">
+      <DependentUpon>NjamiNjamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Nacin_placanja.cs">
+      <DependentUpon>NjamiNjamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NjamiNjamModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NjamiNjamModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NjamiNjamModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NjamiNjamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NjamiNjamModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NjamiNjamModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Klase\PrijavljeniKorisnik.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\DataSources\dsAktivneNarudzbeDohvatiKorisnika.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAktivneNarudzbeDohvatiKorisnika.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\dsAktivneNarudzbeDohvatiNacinPlacanja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAktivneNarudzbeDohvatiNacinPlacanja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\dsAktivneNarudzbeDohvatiNazivArtikla.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAktivneNarudzbeDohvatiNazivArtikla.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\dsAktivneNarudzbeDohvatiTip.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAktivneNarudzbeDohvatiTip.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\dsAktvineNarudzbeDohvatiStatus.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAktvineNarudzbeDohvatiStatus.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\DSDohvatiRacun.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSDohvatiRacun.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\dsDohvatRezervacijeKorisnik.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDohvatRezervacijeKorisnik.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\dsDohvatStatusa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDohvatStatusa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\dsDohvatUloge.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDohvatUloge.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\dsFrmRasporedRadaDohvatiKorisnika.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFrmRasporedRadaDohvatiKorisnika.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\DSRacunIzvjestaj.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSRacunIzvjestaj.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataSources\DSRezervacija.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSRezervacija.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Racun.cs">
+      <DependentUpon>NjamiNjamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rezervacija.cs">
+      <DependentUpon>NjamiNjamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Status_korisnika.cs">
+      <DependentUpon>NjamiNjamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Status_racuna.cs">
+      <DependentUpon>NjamiNjamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Stavke_racuna.cs">
+      <DependentUpon>NjamiNjamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tip.cs">
+      <DependentUpon>NjamiNjamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tjedni_raspored.cs">
+      <DependentUpon>NjamiNjamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Uloga.cs">
+      <DependentUpon>NjamiNjamModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmAktivneNarudzbe.resx">
+      <DependentUpon>FrmAktivneNarudzbe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAzuriranjeRasporeda.resx">
+      <DependentUpon>FrmAzuriranjeRasporeda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBrziArtikli.resx">
+      <DependentUpon>FrmBrziArtikli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajIliAžurirajBrzeArtikle.resx">
+      <DependentUpon>FrmDodajIliAžurirajBrzeArtikle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajIliAžurirajHranu.resx">
+      <DependentUpon>FrmDodajIliAžurirajHranu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajIliAžurirajPiće.resx">
+      <DependentUpon>FrmDodajIliAžurirajPiće.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajIliAžurirajSpecijalnuPonudu.resx">
+      <DependentUpon>FrmDodajIliAžurirajSpecijalnuPonudu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajIliAžurirajZaposlenika.resx">
+      <DependentUpon>FrmDodajIliAžurirajZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodavanjeRacuna.resx">
+      <DependentUpon>FrmDodavanjeRacuna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHrana.resx">
+      <DependentUpon>FrmHrana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIspisRacuna.resx">
+      <DependentUpon>FrmIspisRacuna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKreirajRacun.resx">
+      <DependentUpon>FrmKreirajRacun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKreiranjeNovogRasporeda.resx">
+      <DependentUpon>FrmKreiranjeNovogRasporeda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPice.resx">
+      <DependentUpon>FrmPice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPonovanIspisRacuna.resx">
+      <DependentUpon>FrmPonovanIspisRacuna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPopisStolova.resx">
+      <DependentUpon>FrmPopisStolova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPregledStola.resx">
+      <DependentUpon>FrmPregledStola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrijava.resx">
+      <DependentUpon>FrmPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPonuda.resx">
+      <DependentUpon>FrmPonuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNjamiNjam.resx">
+      <DependentUpon>FrmNjamiNjam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRasporedRadaAdmin.resx">
+      <DependentUpon>FrmRasporedRadaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRasporedRadaKorisnik.resx">
+      <DependentUpon>FrmRasporedRadaKorisnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRačuni.resx">
+      <DependentUpon>FrmRačuni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRezervacije.resx">
+      <DependentUpon>FrmRezervacije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSpecijalnaPonuda.resx">
+      <DependentUpon>FrmSpecijalnaPonuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpravljanjeRezervacijama.resx">
+      <DependentUpon>FrmUpravljanjeRezervacijama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpravljanjeZaposlenicima.resx">
+      <DependentUpon>FrmUpravljanjeZaposlenicima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EntityDeploy Include="NjamiNjamModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NjamiNjamModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="NjamiNjamModel.edmx.diagram">
+      <DependentUpon>NjamiNjamModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Artikli.datasource" />
+    <None Include="Properties\DataSources\dsAktivneNarudzbeDohvatiKorisnika.xsc">
+      <DependentUpon>dsAktivneNarudzbeDohvatiKorisnika.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsAktivneNarudzbeDohvatiKorisnika.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAktivneNarudzbeDohvatiKorisnika.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\dsAktivneNarudzbeDohvatiKorisnika.xss">
+      <DependentUpon>dsAktivneNarudzbeDohvatiKorisnika.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsAktivneNarudzbeDohvatiNacinPlacanja.xsc">
+      <DependentUpon>dsAktivneNarudzbeDohvatiNacinPlacanja.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsAktivneNarudzbeDohvatiNacinPlacanja.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAktivneNarudzbeDohvatiNacinPlacanja.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\dsAktivneNarudzbeDohvatiNacinPlacanja.xss">
+      <DependentUpon>dsAktivneNarudzbeDohvatiNacinPlacanja.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsAktivneNarudzbeDohvatiNazivArtikla.xsc">
+      <DependentUpon>dsAktivneNarudzbeDohvatiNazivArtikla.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsAktivneNarudzbeDohvatiNazivArtikla.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAktivneNarudzbeDohvatiNazivArtikla.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\dsAktivneNarudzbeDohvatiNazivArtikla.xss">
+      <DependentUpon>dsAktivneNarudzbeDohvatiNazivArtikla.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsAktivneNarudzbeDohvatiTip.xsc">
+      <DependentUpon>dsAktivneNarudzbeDohvatiTip.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsAktivneNarudzbeDohvatiTip.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAktivneNarudzbeDohvatiTip.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\dsAktivneNarudzbeDohvatiTip.xss">
+      <DependentUpon>dsAktivneNarudzbeDohvatiTip.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsAktvineNarudzbeDohvatiStatus.xsc">
+      <DependentUpon>dsAktvineNarudzbeDohvatiStatus.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsAktvineNarudzbeDohvatiStatus.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAktvineNarudzbeDohvatiStatus.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\dsAktvineNarudzbeDohvatiStatus.xss">
+      <DependentUpon>dsAktvineNarudzbeDohvatiStatus.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\DSDohvatiRacun.xsc">
+      <DependentUpon>DSDohvatiRacun.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\DSDohvatiRacun.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSDohvatiRacun.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\DSDohvatiRacun.xss">
+      <DependentUpon>DSDohvatiRacun.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsDohvatRezervacijeKorisnik.xsc">
+      <DependentUpon>dsDohvatRezervacijeKorisnik.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsDohvatRezervacijeKorisnik.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDohvatRezervacijeKorisnik.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\dsDohvatRezervacijeKorisnik.xss">
+      <DependentUpon>dsDohvatRezervacijeKorisnik.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsDohvatStatusa.xsc">
+      <DependentUpon>dsDohvatStatusa.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsDohvatStatusa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDohvatStatusa.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\dsDohvatStatusa.xss">
+      <DependentUpon>dsDohvatStatusa.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsDohvatUloge.xsc">
+      <DependentUpon>dsDohvatUloge.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsDohvatUloge.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDohvatUloge.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\dsDohvatUloge.xss">
+      <DependentUpon>dsDohvatUloge.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsFrmRasporedRadaDohvatiKorisnika.xsc">
+      <DependentUpon>dsFrmRasporedRadaDohvatiKorisnika.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\dsFrmRasporedRadaDohvatiKorisnika.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFrmRasporedRadaDohvatiKorisnika.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\dsFrmRasporedRadaDohvatiKorisnika.xss">
+      <DependentUpon>dsFrmRasporedRadaDohvatiKorisnika.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\DSRacunIzvjestaj.xsc">
+      <DependentUpon>DSRacunIzvjestaj.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\DSRacunIzvjestaj.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSRacunIzvjestaj.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\DSRacunIzvjestaj.xss">
+      <DependentUpon>DSRacunIzvjestaj.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\DSRezervacija.xsc">
+      <DependentUpon>DSRezervacija.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\DSRezervacija.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSRezervacija.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\DSRezervacija.xss">
+      <DependentUpon>DSRezervacija.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\FrmAktivneNarudžbe.datasource" />
+    <None Include="Properties\DataSources\FrmAzuriranjeRasporeda.datasource" />
+    <None Include="Properties\DataSources\FrmBrziArtikli.datasource" />
+    <None Include="Properties\DataSources\FrmDodajIliAžurirajArtikl.datasource" />
+    <None Include="Properties\DataSources\FrmDodajIliAžurirajZaposlenika.datasource" />
+    <None Include="Properties\DataSources\FrmHrana.datasource" />
+    <None Include="Properties\DataSources\FrmKreiranjeNovogRasporeda.datasource" />
+    <None Include="Properties\DataSources\FrmNjamiNjam.datasource" />
+    <None Include="Properties\DataSources\FrmPice.datasource" />
+    <None Include="Properties\DataSources\FrmPonovanIspisRacuna.datasource" />
+    <None Include="Properties\DataSources\FrmPonuda.datasource" />
+    <None Include="Properties\DataSources\FrmPrijava.datasource" />
+    <None Include="Properties\DataSources\FrmRasporedRadaAdmin.datasource" />
+    <None Include="Properties\DataSources\FrmRasporedRadaKorisnik.datasource" />
+    <None Include="Properties\DataSources\FrmRačuni.datasource" />
+    <None Include="Properties\DataSources\FrmRezervacije.datasource" />
+    <None Include="Properties\DataSources\FrmSpecijalnaPonuda.datasource" />
+    <None Include="Properties\DataSources\FrmUpravljajPonudom.datasource" />
+    <None Include="Properties\DataSources\FrmUpravljanjeRezervacijama.datasource" />
+    <None Include="Properties\DataSources\FrmUpravljanjeZaposlenicima.datasource" />
+    <None Include="Properties\DataSources\Korisnik.datasource" />
+    <None Include="Properties\DataSources\Nacin_placanja.datasource" />
+    <None Include="Properties\DataSources\Racun.datasource" />
+    <None Include="Properties\DataSources\Status_racuna.datasource" />
+    <None Include="Properties\DataSources\Stavke_racuna.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Tjedni_raspored.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NjamiNjamModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>NjamiNjamModel.Context.cs</LastGenOutput>
+      <DependentUpon>NjamiNjamModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="NjamiNjamModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NjamiNjamModel.edmx</DependentUpon>
+      <LastGenOutput>NjamiNjamModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\Untitled.jpg" />
+    <None Include="Resources\Background.jpg" />
+    <None Include="Resources\Background1.jpg" />
+    <None Include="Resources\martin-211-unsplash.jpg" />
+    <None Include="Resources\malazlica_KTD_icon.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Screenshot_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

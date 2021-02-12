@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NjamiNjam", "NjamiNjam\NjamiNjam.csproj", "{5A8C7D7C-5A9B-4708-A1E1-4DB3716576F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JedinicnoTestiranje", "JedinicnoTestiranje\JedinicnoTestiranje.csproj", "{94B7D2BD-8A43-4FB1-8A80-B590B2EA5EC8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NjamiNjamSetup", "NjamiNjamSetup\NjamiNjamSetup.vdproj", "{5F254C29-64DF-4E93-885D-255B5476722B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A8C7D7C-5A9B-4708-A1E1-4DB3716576F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A8C7D7C-5A9B-4708-A1E1-4DB3716576F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A8C7D7C-5A9B-4708-A1E1-4DB3716576F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A8C7D7C-5A9B-4708-A1E1-4DB3716576F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94B7D2BD-8A43-4FB1-8A80-B590B2EA5EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B7D2BD-8A43-4FB1-8A80-B590B2EA5EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B7D2BD-8A43-4FB1-8A80-B590B2EA5EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B7D2BD-8A43-4FB1-8A80-B590B2EA5EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F254C29-64DF-4E93-885D-255B5476722B}.Debug|Any CPU.ActiveCfg = Debug
+		{5F254C29-64DF-4E93-885D-255B5476722B}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A069218-814A-4668-ADA8-3B2DF200C0AF}
+	EndGlobalSection
+EndGlobal
